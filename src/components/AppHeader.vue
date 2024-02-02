@@ -12,7 +12,7 @@ export default {
         <nav>
             <ul>
                 <li><a href="">CHARACTERS</a></li>
-                <li><a href="">COMICS</a></li>
+                <li><a href="" class="active">COMICS</a></li>
                 <li><a href="">MOVIES</a></li>
                 <li><a href="">TV</a></li>
                 <li><a href="">GAMES</a></li>
@@ -38,12 +38,18 @@ header {
 ul {
     list-style: none;
     display: flex;
-}
 
-& a {
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    color: var(--comics-text-header);
+
+    & a {
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        color: var(--comics-text-header);
+    }
+
+    & a.active {
+        color: var(--comics-primary);
+        border-bottom: 5px solid var(--comics-primary);
+    }
 }
 </style>
